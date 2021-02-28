@@ -1,0 +1,70 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AdCalculator" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="AdditionText">
+        <item name="android:textSize">35sp</item>
+        <item name="android:textColor">@color/colorMainPrimaryText</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="AdditionValueText">
+        <item name="android:textSize">55sp</item>
+        <item name="android:textColor">@color/colorValueText</item>
+        <item name="fontFamily">@font/sen_regular</item>
+    </style>
+
+    <style name="OptionsTitleText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorMainPrimaryText</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+    <style name="StandardText">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+
+    <style name="CalculateNumberText">
+        <item name="android:textSize">23sp</item>
+        <item name="android:textColor">@color/colorMainPrimaryText</item>
+        <item name="fontFamily">@font/sen_regular</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="OperationNumberText">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/sen_regular</item>
+    </style>
+
+    <style name="CalculateSpecialNumberText" parent="CalculateNumberText">
+        <item name="android:textColor">@color/specialNumberColor</item>
+    </style>
+
+    <style name="CalculateFrameStyle">
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="cardBackgroundColor">@color/calculateBtnColor</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+</resources>

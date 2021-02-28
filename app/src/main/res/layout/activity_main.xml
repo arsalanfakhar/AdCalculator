@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mainBackground"
+        tools:context=".screens.main.MainActivity">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/switchButton"
+            android:layout_width="wrap_content"
+            android:text="Dark"
+            app:backgroundTint="@color/switchButton"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/calculateValueText"
+            style="@style/AdditionText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:text="346+74*24"
+            android:textAlignment="textEnd"
+            app:layout_constraintEnd_toEndOf="@+id/switchButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switchButton" />
+
+        <TextView
+            android:id="@+id/calculateAnswerText"
+            style="@style/AdditionValueText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="2122"
+            android:textAlignment="textEnd"
+            app:layout_constraintEnd_toEndOf="@+id/calculateValueText"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/calculateValueText" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="="
+            android:textColor="@color/colorMainPrimaryText"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="@+id/calculateAnswerText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/calculateAnswerText" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calculateAnswerText">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/dotStandard"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/blue_circle" />
+
+                <TextView
+                    android:id="@+id/standardModeBtn"
+                    style="@style/OptionsTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="STANDARD" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/dotAdRevenue"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/blue_circle"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/adRevenueModeBtn"
+                    style="@style/OptionsTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="AD REVENUE" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/dotVideo"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/blue_circle"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/videoModeBtn"
+
+                    style="@style/OptionsTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="VIDEO" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:background="@color/greyBorderColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnC"
+            style="@style/CalculateFrameStyle"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnSeven"
+            app:layout_constraintEnd_toStartOf="@+id/btnBracket"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <TextView
+                style="@style/CalculateSpecialNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnBracket"
+            style="@style/CalculateFrameStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/btnC"
+            app:layout_constraintEnd_toStartOf="@+id/btnPercent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnC"
+            app:layout_constraintTop_toTopOf="@+id/btnC">
+
+            <TextView
+                style="@style/CalculateSpecialNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="()" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnPercent"
+            style="@style/CalculateFrameStyle"
+            android:layout_marginEnd="22dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnBracket"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnBracket"
+            app:layout_constraintTop_toTopOf="@+id/btnBracket">
+
+            <TextView
+                style="@style/CalculateSpecialNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/right_bar"
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnThree"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline4"
+            app:layout_constraintTop_toTopOf="@+id/btnBracket">
+
+
+            <TextView
+                android:id="@+id/operationPercentBtn"
+                style="@style/OperationNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="%" />
+
+            <TextView
+                android:id="@+id/operationMultiplyBtn"
+                style="@style/OperationNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="x" />
+
+            <TextView
+                android:id="@+id/operationSubractBtn"
+                style="@style/OperationNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/operationAddBtn"
+                style="@style/OperationNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="+" />
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnSeven"
+            style="@style/CalculateFrameStyle"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnFour"
+            app:layout_constraintStart_toStartOf="@+id/btnC"
+            app:layout_constraintTop_toBottomOf="@+id/btnC">
+
+            <TextView
+                style="@style/CalculateNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnEight"
+            style="@style/CalculateFrameStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/btnSeven"
+            app:layout_constraintEnd_toStartOf="@+id/btnNine"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnSeven"
+            app:layout_constraintTop_toTopOf="@+id/btnSeven">
+
+            <TextView
+                style="@style/CalculateNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnNine"
+            style="@style/CalculateFrameStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/btnEight"
+            app:layout_constraintEnd_toEndOf="@+id/btnPercent"
+            app:layout_constraintTop_toTopOf="@+id/btnEight">
+
+            <TextView
+                style="@style/CalculateNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnFour"
+            style="@style/CalculateFrameStyle"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnOne"
+            app:layout_constraintStart_toStartOf="@+id/btnSeven"
+            app:layout_constraintTop_toBottomOf="@+id/btnSeven">
+
+            <TextView
+                style="@style/CalculateNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnFive"
+            style="@style/CalculateFrameStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/btnFour"
+            app:layout_constraintEnd_toStartOf="@+id/btnSix"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnFour"
+            app:layout_constraintTop_toTopOf="@+id/btnFour">
+
+            <TextView
+                style="@style/CalculateNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnSix"
+            style="@style/CalculateFrameStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/btnFive"
+            app:layout_constraintEnd_toEndOf="@+id/btnNine"
+            app:layout_constraintTop_toTopOf="@+id/btnFour">
+
+            <TextView
+                style="@style/CalculateNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnOne"
+            style="@style/CalculateFrameStyle"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnZero"
+            app:layout_constraintStart_toStartOf="@+id/btnFour"
+            app:layout_constraintTop_toBottomOf="@+id/btnFour">
+
+            <TextView
+                style="@style/CalculateNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnTwo"
+            style="@style/CalculateFrameStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/btnOne"
+            app:layout_constraintEnd_toStartOf="@+id/btnThree"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnOne"
+            app:layout_constraintTop_toTopOf="@+id/btnOne">
+
+            <TextView
+                style="@style/CalculateNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnThree"
+            style="@style/CalculateFrameStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/btnTwo"
+            app:layout_constraintEnd_toEndOf="@+id/btnSix"
+            app:layout_constraintTop_toTopOf="@+id/btnOne">
+
+            <TextView
+                style="@style/CalculateNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnZero"
+            style="@style/CalculateFrameStyle"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/btnOne"
+            app:layout_constraintTop_toBottomOf="@+id/btnOne">
+
+            <TextView
+                style="@style/CalculateNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnDot"
+            style="@style/CalculateFrameStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/btnZero"
+            app:layout_constraintEnd_toStartOf="@+id/btnBackspace"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnZero"
+            app:layout_constraintTop_toTopOf="@+id/btnZero">
+
+            <TextView
+                style="@style/CalculateNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="." />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnBackspace"
+            style="@style/CalculateFrameStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/btnDot"
+            app:layout_constraintEnd_toEndOf="@+id/btnThree"
+            app:layout_constraintTop_toTopOf="@+id/btnDot">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                app:srcCompat="@drawable/ic_backspace" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/equalSign"
+            style="@style/CalculateFrameStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/btnBackspace"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnBackspace"
+            app:layout_constraintTop_toTopOf="@+id/btnBackspace">
+
+            <TextView
+                style="@style/CalculateSpecialNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="=" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.chauthai.swipereveallayout.SwipeRevealLayout
+            android:id="@+id/layoutAdRevenue"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="10dp"
+            android:visibility="gone"
+            app:dragEdge="left"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnC"
+            app:mode="same_level">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <fragment
+                    android:id="@+id/fragment"
+                    android:name="com.ads.adcalculator.screens.main.AdRevenueFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:layout="@layout/fragment_ad_revenue" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/left_bar">
+
+                <ImageView
+                    android:id="@+id/arrowAdRevenue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_close_arrow" />
+            </FrameLayout>
+
+
+        </com.chauthai.swipereveallayout.SwipeRevealLayout>
+
+        <com.chauthai.swipereveallayout.SwipeRevealLayout
+            android:id="@+id/layoutVideo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            android:elevation="10dp"
+            app:dragEdge="left"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnC"
+            app:mode="same_level">
+
+            <!-- Your secondary layout here -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <fragment
+                    android:id="@+id/fragmentVideo"
+                    android:name="com.ads.adcalculator.screens.main.VideoFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:layout="@layout/fragment_ad_revenue" />
+            </FrameLayout>
+
+            <!-- Your main layout here -->
+            <!-- Your secondary layout here -->
+
+            <FrameLayout
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/left_bar">
+
+                <ImageView
+                    android:id="@+id/arrowVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_close_arrow" />
+            </FrameLayout>
+
+        </com.chauthai.swipereveallayout.SwipeRevealLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.8"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

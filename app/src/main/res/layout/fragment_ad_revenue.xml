@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:minWidth="240dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/blue_gradient"
+        tools:context=".screens.main.AdRevenueFragment">
+
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/StandardText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="CALCULATE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cpmCalculateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            style="@style/StandardText"
+            android:text="CPM"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/cpcCalculateBtn"
+            style="@style/StandardText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CPC"
+            app:layout_constraintEnd_toStartOf="@+id/ctrCalculateBtn"
+            app:layout_constraintStart_toEndOf="@+id/cpmCalculateBtn"
+            app:layout_constraintTop_toTopOf="@+id/cpmCalculateBtn" />
+
+        <TextView
+            android:id="@+id/ctrCalculateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="CTR"
+            style="@style/StandardText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cpcCalculateBtn" />
+
+        <TextView
+            android:id="@+id/cpiCalculateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="CPI"
+            style="@style/StandardText"
+            app:layout_constraintStart_toStartOf="@+id/cpmCalculateBtn"
+            app:layout_constraintTop_toBottomOf="@+id/cpmCalculateBtn" />
+
+        <TextView
+            android:id="@+id/cpaCalculateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CPA"
+            style="@style/StandardText"
+            app:layout_constraintStart_toStartOf="@+id/cpcCalculateBtn"
+            app:layout_constraintTop_toTopOf="@+id/cpiCalculateBtn" />
+
+        <TextView
+            android:id="@+id/ecpmCalculateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="eCPM"
+            style="@style/StandardText"
+            app:layout_constraintEnd_toEndOf="@+id/ctrCalculateBtn"
+            app:layout_constraintTop_toTopOf="@+id/cpaCalculateBtn" />
+
+        <TextView
+            android:id="@+id/cpcFromCpmCalculateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="CPC"
+            style="@style/StandardText"
+            app:layout_constraintStart_toStartOf="@+id/cpiCalculateBtn"
+            app:layout_constraintTop_toBottomOf="@+id/cpiCalculateBtn" />
+
+        <TextView
+            android:id="@+id/cpmFromCpcCalculateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CPM"
+            style="@style/StandardText"
+            app:layout_constraintStart_toStartOf="@+id/cpaCalculateBtn"
+            app:layout_constraintTop_toTopOf="@+id/revCalculateBtn" />
+
+        <TextView
+            android:id="@+id/revCalculateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rev $"
+            style="@style/StandardText"
+            app:layout_constraintEnd_toEndOf="@+id/ecpmCalculateBtn"
+            app:layout_constraintTop_toTopOf="@+id/cpcFromCpmCalculateBtn" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From CPM"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/cpcFromCpmCalculateBtn"
+            app:layout_constraintTop_toBottomOf="@+id/cpcFromCpmCalculateBtn" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From CPC"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/cpmFromCpcCalculateBtn"
+            app:layout_constraintTop_toBottomOf="@+id/cpmFromCpcCalculateBtn" />
+
+        <TextView
+            android:id="@+id/adsenseCalculateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Adsense"
+            style="@style/StandardText"
+            app:layout_constraintStart_toStartOf="@+id/cpcFromCpmCalculateBtn"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+        <TextView
+            android:id="@+id/percentageCalculateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Percentage"
+            style="@style/StandardText"
+            app:layout_constraintEnd_toEndOf="@+id/revCalculateBtn"
+            app:layout_constraintTop_toTopOf="@+id/adsenseCalculateBtn" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

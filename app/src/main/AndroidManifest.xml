@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ads.adcalculator">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AdCalculator">
+        <activity android:name=".screens.adRevenue.PercentageActivity"></activity>
+        <activity android:name=".screens.video.VTRActivity" />
+        <activity android:name=".screens.video.CPMVideoActivity" />
+        <activity android:name=".screens.video.ImpressionActivity" />
+        <activity android:name=".screens.video.CVActivity" />
+        <activity android:name=".screens.video.CPCVActivity" />
+        <activity android:name=".screens.adRevenue.AdsenseActivity" />
+        <activity android:name=".screens.adRevenue.RevenueActivity" />
+        <activity android:name=".screens.adRevenue.ROIActivity" />
+        <activity android:name=".screens.adRevenue.CPCTrafficBuyActivity" />
+        <activity android:name=".screens.adRevenue.EcpmActivity" />
+        <activity android:name=".screens.adRevenue.CPAActivity" />
+        <activity android:name=".screens.adRevenue.CPIActivity" />
+        <activity android:name=".screens.adRevenue.CTRActivity" />
+        <activity android:name=".screens.adRevenue.CPCActivity" />
+        <activity android:name=".screens.adRevenue.CPMActivity" />
+        <activity android:name=".screens.main.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
