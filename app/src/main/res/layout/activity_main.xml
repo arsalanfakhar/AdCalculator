@@ -154,8 +154,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-
-
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/btnC"
             style="@style/CalculateFrameStyle"

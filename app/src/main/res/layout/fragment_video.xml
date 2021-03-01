@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:minWidth="240dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="@drawable/blue_gradient"
         android:orientation="vertical"
         tools:context=".screens.main.VideoFragment">
@@ -31,7 +31,6 @@
             android:id="@+id/cpcvVideoBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:orientation="vertical"
             android:paddingStart="16dp"
             android:paddingEnd="0dp">
@@ -47,14 +46,13 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_regular"
                 android:text="Cost Per Completed Views"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/cvVideoBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:orientation="vertical"
             android:paddingStart="16dp"
             android:paddingEnd="0dp">
@@ -70,14 +68,13 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_regular"
                 android:text="Completed Views"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/vtrVideoBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:orientation="vertical"
             android:paddingStart="16dp"
             android:paddingEnd="0dp">
@@ -93,7 +90,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_regular"
                 android:text="View Through Rate"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <TextView
@@ -102,7 +99,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
             android:text="IMPRESSIONS TO SERVE" />
 
         <TextView
@@ -111,8 +107,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
             android:text="CPM" />
 
     </LinearLayout>

@@ -23,6 +23,7 @@ import com.ads.adcalculator.screens.video.VTRActivity;
 public class VideoFragment extends Fragment {
 
     private FragmentVideoBinding binding;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

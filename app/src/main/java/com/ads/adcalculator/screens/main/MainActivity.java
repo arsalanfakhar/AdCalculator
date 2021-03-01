@@ -125,5 +125,23 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        binding.arrowAdRevenue.setOnClickListener(v -> {
+            if(binding.layoutAdRevenue.isOpened()){
+                binding.layoutAdRevenue.close(true);
+            }
+            else if(binding.layoutAdRevenue.isClosed()){
+                binding.layoutAdRevenue.open(true);
+            }
+        });
+
+        binding.arrowVideo.setOnClickListener(v -> {
+            if(binding.layoutVideo.isOpened()){
+                binding.layoutVideo.close(true);
+            }
+            else if(binding.layoutVideo.isClosed()){
+                binding.layoutVideo.open(true);
+            }
+        });
     }
 }
